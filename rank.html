@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="utf-8" />
+    <title>NRKmeteret</title>
+    <script type="text/javascript" src="https://multimedia.bt.no/krinkelkroken/templates/charts/javascript/jquery-1.8.2.min.js"></script> 
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+<div id="container" style="min-width: 300px; height: 1500px; margin: 0 auto"></div>
+<script>
+Highcharts.chart('container', {
+    chart: {
+        type: 'column',
+        inverted:true
+    },
+    title: {
+        text: 'Brassranking vår 2017'
+    },
+    xAxis: {
+        type: 'category',
+        labels: {
+            style: {
+                fontSize: '10px',
+                fontFamily: 'Verdana, sans-serif'
+            }
+        }
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Population (millions)'
+        }
+    },
+    legend: {
+        enabled: false
+    },
+    tooltip: {
+        pointFormat: 'Poeng: <b>{point.y:.1f}</b>'
+    },
+    series: [{
+        name: 'Population',
+        data: [
+            ['1. Eikanger-Bjørsvik Musikklag',1118.34], ['2. Stavanger Brass Band',1079.26], ['3. Bjørsvik Brass',946.88], ['4. Manger Musikklag',922.48], ['5. Jaren Hornmusikkforening',902.13], ['6. Kleppe Musikklag',875.99], ['7. Oslo Brass Band',875.98], ['8. Krohnengen Brass Band',815.42], ['9. Askøy Brass Band',814.9], ['10. Musikkorpset Gjallarhorn',805.45], ['11. Oslofjord Brass',757.54], ['12. Hasle Brass',700.64], ['13. Ila Brass Band',685.19], ['14. Radøy Brass',665.76], ['15. Tertnes Brass',664.02], ['16. Oster Brass',659.03], ['17. Sola Brass Band',658.35], ['18. Flesland Musikklag',615.73], ['19. Haukås Musikklag',585.76], ['20. Brøttum Brass',577.85], ['21. Alexander Brass Band',549.2], ['22. Sagvåg Musikklag',526.01], ['23. Agder Brass',508.69], ['24. Rong Brass',502.8], ['25. Tertnes Amatørkorps',494.62], ['26. Molde Brass Band',489.28], ['27. Tomra Brass Band',479.47], ['28. Sørum Musikklag',476.7], ['29. Manger Old Star Brass',455.94], ['30. Tysnes Musikklag',454.39], ['31. Follesø Musikklag',416.25], ['32. Gjesdal Brass Band',399.48], ['33. Tromsø Brass',395.54], ['34. Laksevåg Musikkforening',395.14], ['35. Sandefjord Brass Symposium',385.1], ['36. Jølster Musikklag',378.21], ['37. Stangaland Brass',367.42], ['38. Lindås Brass',359.45], ['39. Bergen Brass Band',358.4], ['40. Fjell Brass',350.16], ['41. Ørskog Brass',326.15], ['42. Trondheim Politis Brassband',315.63], ['43. Gjøvik Bybrass',305.18], ['44. Tysvær Brass',293.3], ['45. Stavanger Kommunes Korps',291.42], ['46. Skui Brassband',288.64], ['47. Salhus Musikklag',285.92], ['48. Valdres Brass Band',281.56], ['49. Langhus Brass',269.95], ['50. Montebello Brass',234.78], ['51. Indre Torungen Brass Ensemble',229.22], ['52. Lyshornet Brass',219.33], ['53. Hordvik Musikklag',208.78], ['54. IMI Brass',204.67], ['55. Bjørvika Brass Band',190.14], ['56. Randaberg Musikkorps',179.74], ['57. Hetlevik Musikklag',172.07], ['58. Rosendal Musikklag',169.54], ['59. Fræna Brass Band',162.85], ['60. Flora-Bremanger Brassband',161.38], ['61. Lismarka Mesnali Brass',161.22], ['62. Nes Musikkforening',160.87], ['63. Flå Musikkorps',152.35], ['64. Skeie Brass',149.03], ['65. Sotra Brass',133.48], ['66. Seim Musikklag',132.02], ['67. Nordlys XO',131.24], ['68. Eidsberg Brassband',130.88], ['69. Frei Hornmusikk',125.55], ['70. Florø Hornmusikk',111.52], ['71. Musikkorpset Heimdal',99.11], ['72. Borge Brass Band',95], ['73. Brumunddal Brass',94.11], ['74. Grenland Brass',93.92], ['75. Riska Brass Band',80.73], ['76. Filadelfia Hornorkester Drammen',79.37], ['77. Kjølsdalen Musikklag',71.51], ['78. Holmestrand Ungdomskorps',66.15], ['79. Spydeberg Brass',64.74], ['80. KOS - Krohnengen Old Stars',60.55], ['81. Karmsund Brass',59.76], ['82. Moen Musikkforening',56.4], ['83. Fjordbrass Lavik',54.33], ['84. Eikelandsfjorden Musikklag',52.18], ['85. Lillehammer Brass',46.43], ['86. Hinna Brass',42.11], ['87. Saksumdal Musikkforening',40.64], ['88. Jørpeland Musikkorps',37.6], ['89. Norheimsund Musikklag',33.81], ['90. Ålvik Musikklag',33.46], ['91. Bertnes Brass',28.64], ['92. Krapfoss Hornorkester',23.92], ['93. Rudsbygd Brass',19.26], ['94. Lalm Musikkforening',18.2], ['95. Haus Musikklag',16.06], ['96. Fitjar Musikklag',14.35], ['97. Lyngdal Brass',12.14], ['98. Alsvåg Brass',9.2]
+        ],
+        dataLabels: {
+            enabled: true,
+            color: '#000000',
+            align: 'right',
+            format: '{point.y:.1f}', // one decimal
+            y: 0, // 10 pixels down from the top
+            style: {
+                fontSize: '10px',
+                fontFamily: 'Verdana, sans-serif'
+            }
+        }
+    }]
+});
+    </script>
